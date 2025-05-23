@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<style>
+		html,
+		body {
+		  height: 100%;
+		  font-size: 1rem;
+		  font-family: "Open Sans", sans-serif;
+		  font-style: bold;
+		  background-color: rgb(70, 175, 210);
+		}
+
+		.custom-button {
+		  width: 300px;
+		  height: 100px;
+		}
+		
+
+		nav li a:hover {
+		  background-color: rgb(68, 193, 124);
+		  border-radius: 30px;
+		  align-self: normal;
+		}
+		.gradient {
+		  background-image: url("images/img1.jpg");
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  height: 100%;
+		  width: 100%;
+		  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+		}
+		.page-header {
+		  margin-top: 3.5rem;
+		  font-size: 40px;
+		  color: #000000;
+		}
+		.page-header p {
+		  margin-left: 50rem;
+		  padding: 10rem 5rem 0rem 0rem;
+		}
+		.page-header button {
+		  margin-left: 50rem;
+		}
+		li {
+		  padding-left: 2.5rem;
+		}
+		.dev a{
+		  text-decoration: none;
+		  color: black;
+		}
+		.page.dev{
+		  background: rgb(240, 240, 240);
+		  clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 95%,0 100%);
+		}
+		.dev .card{
+		  width:350px; 
+		  height:500px; 
+		  box-shadow:2px 2px 14px 3px #726c6c;
+		  background-color:rgb(240, 240, 240);
+		}
+		.templates {
+		  margin-bottom: 10rem;
+		  background-size: cover;
+		  height: auto;
+		  width: auto;
+		  padding-bottom: 7rem;
+		  background: rgb(228, 177, 118);
+		  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+		}
+		.templates h1 {
+		  padding-top: 3.5rem;
+		  text-align: center;
+		}
+		.templates p {
+		  padding: 1.5rem;
+		  text-align: center;
+		  font-size: 18px;
+		}
+		.templates img {
+		  padding: 1rem;
+		  border: 0px;
+		  width: 100%;
+		  max-width: 510px;
+		  height: 620px;
+		  object-fit: cover;
+		}
+		/* Container for the features section */
+.features {
+  padding: 2rem;
+}
+
+/* Main heading for the features section */
+.features h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333; /* Dark grey heading text */
+}
+
+/* Style for the Bootstrap card component */
+.features .card {
+  border: none; /* Remove default card border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 8px; /* Optional: round the card corners */
+}
+
+/* Style for the row inside the card (using Bootstrap's grid system) */
+.features .row.g-0 {
+  align-items: center; /* Vertically align the image and text within the row */
+}
+
+/* Style for the image column */
+.features .col-md-4 {
+  display: flex;
+  justify-content: center; /* Center the image horizontally in its column */
+}
+
+/* Style for the images */
+.features .col-md-4 img.img-fluid {
+  max-width: 100%; /* Ensure image doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below inline images */
+}
+
+/* Specific adjustments for the first image */
+.features .row:nth-child(2) .col-md-4 img {
+  margin-top: 1rem; /* Adjust top margin */
+  margin-left: 1rem; /* Adjust left margin */
+}
+
+/* Specific adjustments for the second image */
+.features .row:nth-child(3) .col-md-4 img {
+  margin-top: 0.75rem; /* Adjust top margin */
+  margin-left: 1rem; /* Adjust left margin */
+}
+
+/* Specific adjustments for the third image */
+.features .row:nth-child(4) .col-md-4 img {
+  margin-top: 0.5rem; /* Adjust top margin */
+}
+
+/* Style for the text column */
+.features .col-md-8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the card body content */
+}
+
+/* Style for the card body */
+.features .card-body {
+  padding: 1.5rem;
+}
+
+/* Style for the card title (feature title) */
+.features .card-title {
+  color: #333; /* Dark grey title text */
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Style for the card text (feature description) */
+.features .card-text {
+  color: #666; /* Grey description text */
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Specific padding adjustment for the first card's text */
+.features .row:nth-child(2) .card-text {
+  padding-top: 1rem !important; /* Override inline style with !important if needed */
+}
+
+/* Specific padding adjustment for the second card's text */
+.features .row:nth-child(3) .card-text {
+  padding-top: 1rem !important; /* Override inline style with !important if needed */
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+  .features {
+    padding: 1rem;
+  }
+  .features h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .features .col-md-4 {
+    margin-bottom: 1rem; /* Add space below image on smaller screens */
+  }
+  .features .row.g-0 {
+    flex-direction: column; /* Stack image and text on smaller screens */
+    align-items: flex-start; /* Align items to the start on smaller screens */
+  }
+  .features .col-md-4 {
+    width: 80%; /* Adjust image width on smaller screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+		.page {
+		  margin-top: 2.5rem;
+		  background: rgb(185, 254, 255);
+		  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+		}
+		.page-title {
+		  margin: 4rem 0rem 2.5rem 7rem;
+		}
+		.page-title-para {
+		  margin: 0.5rem 0rem 2.5rem 7rem;
+		}
+		form {
+		  margin-left: 10rem;
+		  padding-left: 10rem;
+		}
+		.Form h1 {
+		  margin: 5rem;
+		  text-align: center;
+		}
+		.Form div {
+		  margin-bottom: 2.5rem;
+		}
+		.Form button {
+		  margin-top: 2rem;
+		}
+		footer {
+		  background-color: #511d4d;
+		  color: #e2e7e9;
+		}
+	</style>
+	<link rel="icon" href="images/RB_Logo.png" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<title>ResumeCraft</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="color:#000000;">
+		<div class="container" style="font-size:20px;">
+			<a class="navbar-brand" href="index.html" style="font-size:28px;"><img src="images/RB.png" alt="Resume Builder Logo"
+					height="45px"> ResumeCraft</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#pageHeader">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Form.html">Create Resume</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#templates">Resume Templates</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="faq.html">FAQ</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<header class="page-header gradient" id="pageHeader">
+		<div class="container">
+			<div class="row">
+				<div>
+					<p style="color: #0a0000; font-weight: bold;">Create Your Professional Resume With Resume Builder
+					</p>
+					<button type="button" class="btn btn-primary"><a href="Form.html"
+							style="text-decoration:none; color:white;"><i
+								class="bi bi-file-earmark-person-fill mr-4"></i>Create Your Resume</a></button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container-fluid templates " id="templates">
+		<h1>Make a resume that stands out</h1>
+		<p>Increase your chances of getting a job by creating your resume with our well designed resume
+			templates.</p>
+		<div class="row" style="width:90%; margin:auto;">
+			<div class="col-md-4">
+				<img src="images/T1.PNG" class="img-thumbnail templates img" alt="Resume Template 1 - Professional Layout">
+			</div>
+			<div class="col-md-4">
+				<img src="images/T2.PNG" class="img-thumbnail templates img" alt="Resume Template 2 - Modern Design">
+			</div>
+			<div class="col-md-4">
+				<img src="images/T3.PNG" class="img-thumbnail templates img" alt="Resume Template 3 - Creative Style">
+			</div>
+		</div>
+	</div>
+
+	<div class="container features">
+		<h1>Features</h1>
+		<div class="row">
+			<div class="card mb-3" style="max-width: 100%; justify-content:center;">
+				<div class="row g-0">
+					<div class="col-md-4">
+						<img src="images/R1.png" class="img-fluid rounded-start mt-4 ml-4"
+							style="height:73%; width:50%;" alt="Quick resume building illustration">
+					</div>
+					<div class="col-md-8">
+						<div class="card-body">
+							<h2 class="card-title">Quick and easy resume builder</h2>
+							<p class="card-text" style="padding-top:2.5rem;">With our online CV maker, it is simple for
+								anyone to quickly create a professional CV. Enter your personal details and begin
+								filling out your CV content. Finally, choose one of our available CV layouts, and
+								download your CV.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="card mb-3" style="max-width: 100%;">
+				<div class="row g-0">
+					<div class="col-md-4" style="justify-content:center;">
+						<img src="images/R2.png" class="img-fluid mt-3 ml-4" style="height:90%; width:60%;" alt="Job success illustration">
+					</div>
+					<div class="col-md-8">
+						<div class="card-body">
+							<h2 class="card-title">More likely to land a job</h2>
+							<p class="card-text" style="padding-top:2.5rem;">With a representative and professional CV,
+								you will stand out amongst all other applicants. You are also up to 65% more likely to
+								be invited to an interview.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="card mb-3" style="max-width: 100%;">
+				<div class="row g-0">
+					<div class="col-md-4">
+						<img src="images/R3.png" class="img-fluid rounded-start mx-auto mt-2"
+							style="width:240px;height:210px;" alt="Organization illustration">
+					</div>
+					<div class="col-md-8">
+						<div class="card-body">
+							<h2 class="card-title">Organize your applications</h2>
+							<p class="card-text">Often, it is important to be able to tailor your CV based on the job
+								you wish to apply for. With CV maker, you can create and manage several different CVs in
+								an organised way through your own personal account hub.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid page">
+		<div class="row">
+			<h2 class="page-title">Boost your chances of getting that job you've been dreaming of</h2>
+			<p class="page-title-para">With CV maker, you can quickly and easily create a distinctive and professional
+				CV within 15 minutes.
+			</p>
+		</div>
+		<div class="row">
+			<div class="button-container" style="margin:0rem 0rem 2.5rem 7rem; height:100%;">
+				<button type="button" class="btn btn-outline-dark"><a href="Form.html"
+						style="text-decoration:none;">Create Your Resume</a></button>
+			</div>
+		</div>
+	</div>
+	<div class="container Form">
+		<h1>Contact Us</h1>
+		<div class="row">
+			<form class="row g-3">
+				<div class="col-md-6">
+					<label for="name" class="form-label">Name</label>
+					<input type="text" class="form-control" id="name" name="name" required>
+				</div>
+				<div class="col-md-6">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" name="email" required>
+				</div>
+				<div class="col-12">
+					<label for="feedback" class="form-label">Feedback</label>
+					<textarea class="form-control" rows="5" id="feedback" name="feedback"
+						placeholder="Your Feedback" required></textarea>
+				</div>
+				<div class="col-12">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<footer class="page-footer font-small black">
+		<div class="footer-copyright text-center py-3">© 2024 Copyright Resume Builder
+		</div>
+	</footer>
+</body>
+<script>
+	$(function () {
+		$("[rel='tooltip']").tooltip();
+	});
+</script>
+
+</html>
